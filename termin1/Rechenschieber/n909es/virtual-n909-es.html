@@ -1,0 +1,81 @@
+<html>
+<!--
+CODE AND IMAGES COPYRIGHT (c) 2005, DEREK ROSS
+-->
+<title>Virtual Pickett N909-ES SIMPLEX TRIG RULE with METRIC CONVERSION Slide Rule</title>
+<script type="text/javascript">
+<!--
+
+var showing_front=1;
+
+function showRuleBack()
+{        
+  document.images.statortop.src ='n909-es-stator-back-top.jpg';   
+  
+  document.images.statorbottom.src ='n909-es-stator-back-bottom.jpg';     
+  
+  dd.elements.slider.swapImage('n909-es-slider-back.jpg');     
+}
+
+function showRuleFront()
+{        
+  document.images.statortop.src ='n909-es-stator-front-top.jpg'; 
+  
+  document.images.statorbottom.src ='n909-es-stator-front-bottom.jpg';   
+  
+  dd.elements.slider.swapImage('n909-es-slider-front.jpg');     
+}
+
+function flipSlideRule()
+{
+ if(showing_front)
+ {
+    showRuleBack();
+   showing_front = 0;
+ }
+ else
+ {
+    showRuleFront();
+   showing_front = 1;
+ }
+}
+
+-->
+</script>
+<link href="../rulepages.css" rel="stylesheet" type="text/css">
+<body>
+<b><big>Simulated Pickett N909-ES Slide Rule</big></b> 
+<!--
+A simulation of a Pickett slide rule implemented entirely in JavaScript and DHTML.<br>
+<b>Instructions</b>: Just click and drag anywhere on the rule. If it's not working properly, click <b>"Reload"</b> on your browser 
+to reinitialize things. I think the problem is that some initialization functions are called before the images are done loading.<br>
+This page made possible by the miraculous 
+<a href="..\..\..\..\www.walterzorn.com\dragdrop\dragdrop_e.htm"> Drag & Drop for Images and Layers</a> 
+library by Walter Zorn.<br> (Note: I commented out line 1197 of wz_dragdrop.js, 
+"<tt>dd.obj.maximizeZ();</tt>" for aesthetic reasons.)<p>
+-->
+<small><a href="n909-es-instructions.jpg">[Instruction Sheet (jpg)]</a></small>
+<small><a href="http://solo.dc3.com/VirtRule/n909es/..%5Cindex.html">[Gallery Index]</a></small>
+<small> [Copyright © 2005 Derek Ross]</small>
+<hr>
+
+<script type="text/javascript" src="../wz_dragdrop.js"></script>
+<table width="100%"><tr><td align="right"><button align=right onClick="flipSlideRule()">Flip to Other Side of Slide Rule</button></td></tr></table>
+<div id="layer1" style="position:relative;top:10px;left:20px;height:290px;width:1868px">   
+   
+   <img style="position:absolute;top:36px;left:0;" id="statortop" src="n909-es-stator-front-top.jpg" width=1828 height=50 >
+   <img style="position:absolute;top:86px;left:0;" name="slider" src="n909-es-slider-front.jpg" width=1828 height=83 >
+   <img style="position:absolute;top:169px;left:0;" id="statorbottom" src="n909-es-stator-front-bottom.jpg" width=1828 height=50 >
+      
+   <img style="position:absolute;top:85px;left:-1;" name="leftendbit" src="n909-es-end-front-left-bit.gif" width=78 height=85 >
+   <img style="position:absolute;top:85px;left:1751;" name="rightendbit" src="n909-es-end-front-right-bit.gif" width=77 height=85  >
+   <img style="position:absolute;top:0px;left:200;" name="cursor" src="n909-es-cursor.gif" width=189 height=254 >
+  
+</div>
+<script type="text/javascript">
+<!--
+SET_DHTML( SCROLL, "cursor"+HORIZONTAL,"rightendbit"+HORIZONTAL+VERTICAL,"leftendbit"+HORIZONTAL+VERTICAL, "layer1"+HORIZONTAL, "slider"+HORIZONTAL);
+-->
+</script>
+
+</body></html>

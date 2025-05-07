@@ -1,0 +1,75 @@
+<html><title>Virtual Pickett N600-ES Slide Rule</title>
+
+<!--
+CODE AND IMAGES COPYRIGHT DEREK ROSS, 2005
+-->
+
+<script type="text/javascript">
+<!--
+
+
+
+var showing_front=1;
+
+function showRuleBack()
+{        
+  document.images.stator.src ='n600-es-stator-back.jpg'; 
+  dd.elements.slider.swapImage('n600-es-slider-back-b.jpg');   
+}
+
+function showRuleFront()
+{        
+  document.images.stator.src ='n600-es-stator-front.jpg'; 
+  dd.elements.slider.swapImage('n600-es-slider-front-b.jpg');   
+}
+
+function flipSlideRule()
+{
+ if(showing_front)
+ {
+    showRuleBack();
+   showing_front = 0;
+ }
+ else
+ {
+    showRuleFront();
+   showing_front = 1;
+ }
+}
+
+-->
+</script>
+<link href="../rulepages.css" rel="stylesheet" type="text/css">
+<body>
+<b><big>Virtual Pickett N600-ES Slide Rule</big></b> 
+<!--
+A simulation of a Pickett slide rule implemented entirely in JavaScript and DHTML.<br>
+<b>Instructions</b>: Just click and drag anywhere on the rule. If it's not working properly, click <b>"Reload"</b> on your browser 
+to reinitialize things. I think the problem is that some initialization functions are called before the images are done loading.<br>
+This page made possible by the miraculous 
+<a href="..\..\..\www.walterzorn.com\dragdrop\dragdrop_e.htm"> Drag & Drop for Images and Layers</a> 
+library by Walter Zorn.<br> (Note: I commented out line 1197 of wz_dragdrop.js, 
+"<tt>dd.obj.maximizeZ();</tt>" for aesthetic reasons.)<p>
+-->
+<small><a href="../index.html">[Gallery Index]</a></small>
+<small> [Copyright © 2005 Derek Ross]</small>
+<hr>
+
+<script type="text/javascript" src="../wz_dragdrop.js"></script>
+<table width="100%"><tr><td align="right"><button align=right onClick="flipSlideRule()">Flip to Other Side of Slide Rule</button></td></tr></table>
+<div id="layer1" style="position:relative;top:10px;left:20px;height:497px;width:1819px" width=42 height=331>   
+   <img style="position:absolute;top:148px;left:38px;" name="endleft" src="n600-es-end-front-left.jpg" width=42 height=168>
+   <img style="position:absolute;top:151px;left:1712px;" name="endright" src="n600-es-end-front-right.jpg" width=43 height=168>   
+   <img style="position:absolute;top:0px;left:200px;" name="cursor" src="n600-es-cursor-c.gif" width=221 height=467>   
+   <img style="position:absolute;top:164px;" name="slider" src="n600-es-slider-front-b.jpg" width=1779 height=138>   
+   <img style="position:absolute;top:68px;" name="stator" src="n600-es-stator-front.jpg" width=1789 height=331>
+</div>
+
+
+<script type="text/javascript">
+<!--
+SET_DHTML(SCROLL, "cursor"+HORIZONTAL, "layer1"+HORIZONTAL, "endleft"+HORIZONTAL+VERTICAL,"endright"+HORIZONTAL+VERTICAL,  "slider"+HORIZONTAL);
+-->
+</script>
+
+</body></html>

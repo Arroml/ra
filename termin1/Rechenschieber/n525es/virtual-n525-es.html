@@ -1,0 +1,87 @@
+<html>
+<!--
+CODE AND IMAGES COPYRIGHT (c) 2005, DEREK ROSS
+-->
+<title>Virtual Pickett N525-ES StatRule Slide Rule</title>
+<script type="text/javascript">
+<!--
+
+var showing_front=1;
+
+function showRuleBack()
+{        
+  document.images.statortop.src ='n525-es-stator-back-top.jpg';   
+  
+  document.images.statorbottom.src ='n525-es-stator-back-bottom.jpg';     
+  
+  dd.elements.slider.swapImage('n525-es-slider-back.jpg');     
+}
+
+function showRuleFront()
+{        
+  document.images.statortop.src ='n525-es-stator-front-top.jpg'; 
+  
+  document.images.statorbottom.src ='n525-es-stator-front-bottom.jpg';   
+  
+  dd.elements.slider.swapImage('n525-es-slider-front.jpg');     
+}
+
+function flipSlideRule()
+{
+ if(showing_front)
+ {
+    showRuleBack();
+   showing_front = 0;
+ }
+ else
+ {
+    showRuleFront();
+   showing_front = 1;
+ }
+}
+
+-->
+</script>
+<link href="../rulepages.css" rel="stylesheet" type="text/css">
+<body>
+<b><big>Simulated Pickett N525-ES StatRule Slide Rule</big></b> 
+<!--
+A simulation of a Pickett slide rule implemented entirely in JavaScript and DHTML.<br>
+<b>Instructions</b>: Just click and drag anywhere on the rule. If it's not working properly, click <b>"Reload"</b> on your browser 
+to reinitialize things. I think the problem is that some initialization functions are called before the images are done loading.<br>
+This page made possible by the miraculous 
+<a href="..\..\..\..\www.walterzorn.com\dragdrop\dragdrop_e.htm"> Drag & Drop for Images and Layers</a> 
+library by Walter Zorn.<br> (Note: I commented out line 1197 of wz_dragdrop.js, 
+"<tt>dd.obj.maximizeZ();</tt>" for aesthetic reasons.)<p>
+-->
+<small><a href="http://solo.dc3.com/VirtRule/n525es/..%5Cindex.html">[Gallery Index]</a></small>
+<small> [Copyright © 2005 Derek Ross]</small>
+<hr>
+
+<script type="text/javascript" src="../wz_dragdrop.js"></script>
+<table width="100%"><tr><td align="right"><button align=right onClick="flipSlideRule()">Flip to Other Side of Slide Rule</button></td></tr></table>
+<div id="layer1" style="position:relative;top:10px;left:20px;height:310px;width:1868px">   
+   
+
+   <img style="position:absolute;top:33px;left:0;" id="statortop" src="n525-es-stator-front-top.jpg" width=1828 height=69 >
+   <img style="position:absolute;top:102px;left:0;" name="slider" src="n525-es-slider-front.jpg" width=1828 height=83 >
+   <img style="position:absolute;top:185px;left:0;" id="statorbottom" src="n525-es-stator-front-bottom.jpg" width=1828 height=69 >
+   
+   
+   <img style="position:absolute;top:101px;left:0;" name="leftendbit" src="n525-es-end-front-left-bit.gif" width=78 height=84 >
+   <img style="position:absolute;top:101px;left:1751;" name="rightendbit" src="n525-es-end-front-right-bit.gif" width=77 height=84  >
+   <img style="position:absolute;top:-1px;left:200;" name="cursor" src="n525-es-cursor.gif" width=186 height=290 >
+
+   
+   
+   
+</div>
+
+
+<script type="text/javascript">
+<!--
+SET_DHTML( SCROLL, "cursor"+HORIZONTAL,"rightendbit"+HORIZONTAL+VERTICAL,"leftendbit"+HORIZONTAL+VERTICAL, "layer1"+HORIZONTAL, "slider"+HORIZONTAL);
+-->
+</script>
+
+</body></html>
