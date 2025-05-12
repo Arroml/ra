@@ -1,0 +1,341 @@
+<html>
+<head>
+<!-- Edited for stand-alone operation by Bob Denny <rdenny@dc3.com> -->
+<title>Computing Devices - Aristo Multilog Nr. 970 Simulator - Stefan Vorkoetter</title>
+<style>
+<!--
+BODY {font-family:Century Schoolbook, Cambria, Palatino, Palatino Linotype, Book Antiqua, Times, Serif; color:#180000}
+BLOCKQUOTE.CATALOG {font-family:Helvetica,Arial,sansserif; font-size:91%}
+CODE {font-weight:bold; color:#000099}
+CODE.DISPLAY {font-size:141%; color:#333333}
+TABLE.LISTING {background-color:#CCCCCC}
+TD.AD {font-family:Arial,Helvetica; font-size:91%; color:#180000}
+TD.MAIN {line-height:1.25em}
+TD.TITLE {font-family:Century Schoolbook, Cambria, Palatino, Palatino Linotype, Book Antiqua, Times, Serif; font-size:235%; font-weight:bold; text-align:center; color:#180000; letter-spacing: -1px}
+TD.SUBTITLE {font-family:Century Schoolbook, Cambria, Palatino, Palatino Linotype, Book Antiqua, Times, Serif; font-size:120%; font-weight:bold; font-style:italic; text-align:center; color:#CC0000}
+TD.CAPTION {font-size:91%; font-style:italic; text-align:center; color:#333333}
+TD.READOUT {font-family:Lucida Sans Typewriter,Lucida Console,Courier New,Courier,monospace }
+TD.LINENUM {font-family:Consolas, Lucida Console, Lucida Sans Typewriter, monospace; background-color:#EEEEEE}
+TD.INST {font-family:Consolas, Lucida Console, Lucida Sans Typewriter, monospace; background-color:#EEEEEE}
+TD.CARDTITLE {font-family:Corbel,Arial,sansserif; font-size:100%; font-weight:bold; color:white; background-color:444433}
+TD.CARDF {font-family:Corbel,Arial,sansserif; font-size:90%; font-weight:bold; color:FFCC11; background-color:444433}
+TD.CARD {font-family:Corbel,Arial,sansserif; font-size:90%; font-weight:bold; color:white; background-color:444433}
+TD.LED {font-family:Lucida Sans Typewriter,Lucida Console,Courier New,Courier,monospace; color:darkred; font-weight:bold; background-color:#EEEEEE; text-align:right}
+TD.COMMENT {font-family:Century Schoolbook, Cambria, Palatino, Palatino Linotype, Book Antiqua, Times, Serif; font-style:italic; background-color:#EEEEEE}
+TD.DATA {font-family:Century Schoolbook, Cambria, Palatino, Palatino Linotype, Book Antiqua, Times, Serif; background-color:#EEEEEE; text-align:center}
+TD.FIELD {font-weight:bold}
+TD.SCALES {font-size:91%; font-family:Helvetica,Arial,sansserif}
+TH.SPECS {font-weight:bold; color:#FFEE44; letter-spacing:+3px; background-color:#333333}
+P.POSTED {font-style:italic; color:#CC0000}
+P.COMMENT {font-size:91%}
+H1 {font-family:Century Schoolbook, Cambria, Palatino, Palatino Linotype, Book Antiqua, Times, Serif; color:#CC0000; line-height:1.2em}
+H2 {font-family:Century Schoolbook, Cambria, Palatino, Palatino Linotype, Book Antiqua, Times, Serif; color:#CC0000; line-height:1.2em}
+H3 {font-family:Century Schoolbook, Cambria, Palatino, Palatino Linotype, Book Antiqua, Times, Serif; color:#CC0000; line-height:1.2em}
+H4 {font-family:Century Schoolbook, Cambria, Palatino, Palatino Linotype, Book Antiqua, Times, Serif; color:#CC0000; line-height:1.2em}
+P.HEADING {font-family:Century Schoolbook, Cambria, Palatino, Palatino Linotype, Book Antiqua, Times, Serif; color:#CC0000; font-weight:bold}
+LI {margin-bottom:+2px}
+LI.RSS {margin-bottom:+0px}
+A.TOP {text-decoration:underline; font-weight:bold; font-size:110%; color:#FFEE44}
+P.EQUATION {text-align:center; font-size:110%; margin-top:-5px}
+SPAN.OVERBAR {text-decoration:overline}
+-->
+</style>
+</head>
+<body bgcolor=#CCCCCC background="okoume.jpg" link=#990000 vlink=#663333>
+<h1>Aristo Multilog Nr. 970 Simulator</h1>
+<script type="text/javascript" src="../wz_dragdrop.js"></script>
+<script>
+var showing_front = 1;
+function flip_rule()
+{
+showing_front = 1 - showing_front;
+if( showing_front ) {
+document.images.stator.src = 'front-stator.gif';
+dd.elements.slider.swapImage('front-slider.gif');
+dd.elements.frontleftend.swapImage('front-left-end.gif');
+dd.elements.frontrightend.swapImage('front-right-end.gif');
+dd.elements.cursor.swapImage('front-cursor.gif');
+}
+else {
+document.images.stator.src = 'back-stator.gif';
+dd.elements.slider.swapImage('back-slider.gif');
+dd.elements.frontleftend.swapImage('transparentpixel.gif');
+dd.elements.frontrightend.swapImage('transparentpixel.gif');
+dd.elements.cursor.swapImage('back-cursor.gif');
+}
+}
+</script>
+<p>
+<button onClick="flip_rule()">Flip Slide Rule</button>
+<b>Click button to flip rule over. Use mouse to move slide or cursor.</b>
+<p>
+<div id="layer1" style="position:relative;left:0px;top:0px;width:1613px;height:299px">
+<img style="position:absolute;left:10px;top:34px" name="stator" src="front-stator.gif" width=1593 height=226>
+<img style="position:absolute;left:10px;top:105px" name="slider" src="front-slider.gif" width=1593 height=84>
+<img style="position:absolute;left:16px;top:105px" name="frontleftend" src="front-left-end.gif" width=76 height=84>
+<img style="position:absolute;left:1519px;top:105px" name="frontrightend" src="front-right-end.gif" width=77 height=84>
+<img style="position:absolute;left:101px;top:9px" name="cursor" src="front-cursor.gif" width=212 height=280>
+</div>
+<p>
+<form name="tracker">
+<table border=0 cellpadding=0 cellspacing=0>
+<tr>
+<td width=10>&nbsp;
+
+</td>
+<td nowrap class=READOUT>
+<b><font color=darkred>LL<small>00</small>(e<sup>-0.001x</sup>):</font></b> <input name="LL00" type="text" size=6>
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;
+</td>
+<td nowrap class=READOUT>
+<b>K(x<sup>3</sup>):</b> <input name="K" type="text" size=4>
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;
+</td>
+<td nowrap class=READOUT>
+<b>A(x<sup>2</sup>):</b> <input name="A" type="text" size=4>
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;
+</td>
+<td>
+<img src="divider.gif" width=1 height=30 vspace=0 hspace=0 border=0>
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;
+</td>
+<td nowrap class=READOUT>
+<b>B(x'<sup>2</sup>):</b> <input name="B" type="text" size=4>
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;
+</td>
+<td nowrap class=READOUT>
+<b>S(arcsin 0.1x'):</b> <input name="S" type="text" size=3>&deg;<br>
+<b><font color=darkred>S(arccos 0.1x'):</font></b> <input name="CS" type="text" size=3>&deg;<br>
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;
+</td>
+<td nowrap class=READOUT>
+<b>ST(arc 0.01x'):</b> <input name="ST" type="text" size=4>&deg;<br>
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;
+</td>
+<td nowrap class=READOUT>
+<b>T(arctan 0.1x'):</b> <input name="T" type="text" size=3>&deg;<br>
+<b><font color=darkred>T(arccot 0.1x'):</font></b> <input name="CT" type="text" size=3>&deg;<br>
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;
+</td>
+<td nowrap class=READOUT>
+<b>C(x'):</b> <input name="C" type="text" size=4>
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;
+</td>
+<td>
+<img src="divider.gif" width=1 height=30 vspace=0 hspace=0 border=0>
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;
+</td>
+<td nowrap class=READOUT>
+<b>D(x):</b> <input name="D" type="text" size=4>
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;
+</td>
+<td nowrap class=READOUT>
+<b><font color=darkred>DI(<sup>1</sup>/<sub>x</sub>):</font></b> <input name="DI" type="text" size=4>
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;
+</td>
+<td nowrap class=READOUT>
+<b>LL<small>0</small>(e<sup>0.001x</sup>):</b> <input name="LL0" type="text" size=6>
+</td>
+</tr>
+</table>
+<p>
+<table border=0 cellpadding=0 cellspacing=0>
+<tr>
+<td width=10>&nbsp;
+
+</td>
+<td nowrap class=READOUT>
+<b><font color=darkred>LL<small>01</small>(e<sup>-0.01x</sup>):</font></b> <input name="LL01" type="text" size=5>
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;
+</td>
+<td nowrap class=READOUT>
+<b><font color=darkred>LL<small>02</small>(e<sup>-0.1x</sup>):</font></b> <input name="LL02" type="text" size=4>
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;
+</td>
+<td nowrap class=READOUT>
+<b><font color=darkred>LL<small>03</small>(e<sup>-x</sup>):</font></b> <input name="LL03" type="text" size=8>
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;
+</td>
+<td nowrap class=READOUT>
+<b>DF(<font face=serif>&pi;</font>x):</b> <input name="DF" type="text" size=4>
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;
+</td>
+<td>
+<img src="divider.gif" width=1 height=25 vspace=0 hspace=0 border=0>
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;
+</td>
+<td nowrap class=READOUT>
+<b>CF(<font face=serif>&pi;</font>x'):</b> <input name="CF" type="text" size=4>
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;
+</td>
+<td nowrap class=READOUT>
+<b><font color=darkred>CIF(<sup>1</sup>/<sub><font face=serif>&pi;</font>x'</sub>):</font></b> <input name="CIF" type="text" size=4>
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;
+</td>
+<td nowrap class=READOUT>
+<b>L(log x'):</b> <input name="L" type="text" size=5>
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;
+</td>
+<td nowrap class=READOUT>
+<b><font color=darkred>CI(<sup>1</sup>/<sub>x'</sub>):</font></b> <input name="CI" type="text" size=5>
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;
+</td>
+<td>
+<img src="divider.gif" width=1 height=25 vspace=0 hspace=0 border=0>
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;
+</td>
+<td nowrap class=READOUT>
+<b>LL<small>3</small>(e<sup>x</sup>):</b> <input name="LL3" type="text" size=4>
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;
+</td>
+<td nowrap class=READOUT>
+<b>LL<small>2</small>(e<sup>0.1x</sup>):</b> <input name="LL2" type="text" size=4>
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;
+</td>
+<td nowrap class=READOUT>
+<b>LL<small>1</small>(e<sup>0.01x</sup>):</b> <input name="LL1" type="text" size=5>
+</td>
+</tr>
+</table>
+</form>
+<p>&nbsp;<br>
+This simulator is based on the impressive collection of
+<a href="../index.html">Pickett slide rule simulators by Derek Ross</a>.
+Derek has given me permission to use his JavaScript code, which I have
+enhanced to add the digital readouts of the scales that you see above. The
+movable parts of the slide rule are implemented using the
+<a href="http://www.walterzorn.com/dragdrop/dragdrop_e.htm">Drag &amp; Drop for Images and Layers</a>
+library.
+<p>
+Because of the level of detail needed to accurately represent a slide rule,
+this simulation is best viewed full-screen on a high-resolution wide-format
+display to get the full effect of using a slide rule. It will work on
+smaller displays too, but you'll need to scroll back and forth in order to
+see the entire rule.
+<script type="text/javascript">
+SET_DHTML(SCROLL, "cursor"+HORIZONTAL+MAXOFFLEFT+25+MAXOFFRIGHT+1222, "frontleftend"+NO_DRAG, "frontrightend"+NO_DRAG, "slider"+HORIZONTAL+MAXOFFLEFT+1500+MAXOFFRIGHT+1500);
+var cursor_origin = dd.elements.cursor.x;
+var slider_origin = dd.elements.slider.x;
+function format_number(n,s)
+{
+if( n == 0 ) {
+str = '0.000000000';
+return str.substring(0,s+2);
+}
+str = '' + (n + 1e-9);
+digits = 0;
+non_zero_seen = 0;
+dot_seen = 0;
+round = 1;
+for( i = 0; i < str.length; i++ ) {
+c = str.substring(i,i+1);
+if( '0' <= c && c <= '9' ) {
+if( dot_seen )
+round *= 10;
+if( c != '0' )
+non_zero_seen = 1;
+if( non_zero_seen && ++digits >= s && dot_seen ) {
+n = Math.round(round * n) / round;
+str = '' + n;
+if( str.indexOf('.') < 0 )
+str = str + '.';
+str = str + '00000000';
+return str.substring(0,i+1);
+}
+}
+else if( c == '.' ) {
+dot_seen = 1;
+if( non_zero_seen && digits >= s ) {
+n = Math.round(n);
+str = '' + n;
+return str.substring(0,i);
+}
+}
+}
+return str; // we ran out of digits
+}
+function display_scales()
+{
+var x = dd.elements.cursor.x - cursor_origin;
+var xp = x - (dd.elements.slider.x - slider_origin);
+x = Math.pow(10, x / 1180);
+xp = Math.pow(10, xp / 1180);
+document.tracker.LL00.value = format_number(Math.exp(-0.001*x),6);
+document.tracker.K.value = format_number(x*x*x,4);
+document.tracker.A.value = format_number(x*x,4);
+document.tracker.B.value = format_number(xp*xp,4);
+document.tracker.S.value = format_number(Math.asin(0.1*xp) * 57.2958,4);
+document.tracker.CS.value = format_number(Math.acos(0.1*xp) * 57.2958,4);
+document.tracker.ST.value = format_number(xp * 0.572958,4);
+document.tracker.T.value = format_number(Math.atan(0.1*xp) * 57.2958,4);
+document.tracker.CT.value = format_number(90 - Math.atan(0.1*xp) * 57.2958,4);
+document.tracker.C.value = format_number(xp,4);
+document.tracker.D.value = format_number(x,4);
+document.tracker.DI.value = format_number(1/x,4).substring(0,6);
+document.tracker.LL0.value = format_number(Math.exp(0.001*x),7);
+document.tracker.LL01.value = format_number(Math.exp(-0.01*x),5);
+document.tracker.LL02.value = format_number(Math.exp(-0.1*x),4);
+document.tracker.LL03.value = format_number(Math.exp(-x),4).substring(0,9);
+document.tracker.DF.value = format_number(0.3141592654 * x,4);
+document.tracker.CF.value = format_number(0.3141592654 * xp,4);
+document.tracker.CIF.value = format_number(1 / (0.3141592654 * xp),4);
+document.tracker.L.value = format_number(0.4342944819 * Math.log(xp),4).substring(0,6+(xp<1));
+document.tracker.CI.value = format_number(1/xp,4).substring(0,6);
+document.tracker.LL3.value = format_number(Math.exp(x),4);
+document.tracker.LL2.value = format_number(Math.exp(0.1*x),5);
+document.tracker.LL1.value = format_number(Math.exp(0.01*x),6);
+}
+function my_PickFunc() { display_scales() }
+function my_DragFunc() { display_scales() }
+function my_DropFunc() { display_scales() }
+display_scales();
+</script>
+</body></html>

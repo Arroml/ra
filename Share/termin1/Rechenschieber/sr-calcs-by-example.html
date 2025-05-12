@@ -1,0 +1,611 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Slide Rule Calculations By Example</title>
+<style type="text/css">
+body {
+	font-family:Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	background-color: #FFFFCC;
+}
+h3 {
+	font-family:Arial, Helvetica, sans-serif;
+}
+</style>
+</head>
+<body>
+<h1><a class="mozTocH1" name="mozTocId100360"></a>Slide Rule
+Calculations by Example</h1>
+<a href="index.html">[back to Virtual Slide Rule Index]</a>
+<hr size="2" width="100%">
+<h2><a class="mozTocH2" name="mozTocId508559"></a>Introduction
+</h2>
+This isn't really a tutorial, it's more of a self-guided demo. This
+page gives numeric examples of the basic calculations that a slide
+rule can do. Just follow the step-by-step instructions and you will be
+amazed by the power and versatility of the venerable slipstick. Just
+start up a <a
+ href="n909es/virtual-n909-es.html"
+ target="_blank">virtual slide rule</a> (opens in new window) and start
+calculating. <br>
+<ul id="mozToc">
+<!--mozToc h1 1 h2 2--><li><a href="sr-calcs-by-example.html#mozTocId271389">Multiplication</a>
+    <ul>
+      <li><a href="sr-calcs-by-example.html#mozTocId330634">Simple Multiplication
+(uses C and D scales)</a></li>
+      <li><a href="sr-calcs-by-example.html#mozTocId162810">'Wrap-Around' Multiplication (uses
+C and D scales)</a></li>
+      <li><a href="sr-calcs-by-example.html#mozTocId189215">Folded-Scale
+Multiplication (uses C, D, CF and DF scales)</a></li>
+      <li><a href="sr-calcs-by-example.html#mozTocId131747">Multiplication by &#960; (uses D and DF
+scales)</a></li>
+    </ul>
+  </li>
+  <li><a href="sr-calcs-by-example.html#mozTocId615703">Division</a>
+    <ul>
+      <li><a href="sr-calcs-by-example.html#mozTocId288919">Simple Division (uses
+C and D scales)</a></li>
+      <li><a href="sr-calcs-by-example.html#mozTocId608173">Reciprocal (uses C
+and CI scales)</a></li>
+    </ul>
+  </li>
+  <li><a href="sr-calcs-by-example.html#mozTocId574462">Trigonometry</a>
+    <ul>
+      <li><a href="sr-calcs-by-example.html#mozTocId93620">Sin(x) for angles
+between 5.7&deg; and 90&deg; (uses S and C scales)</a></li>
+      <li><a href="sr-calcs-by-example.html#mozTocId270328">Cos(x) for angles between 5.7&deg;
+and 90&deg; (uses S and C scales)</a></li>
+      <li><a href="sr-calcs-by-example.html#mozTocId723035">Tan(x) for angles
+between between 5.7&deg; and 45&deg; (uses T and
+C
+scales)</a></li>
+      <li><a href="sr-calcs-by-example.html#mozTocId102755">Tan(x) for angles
+between between 45&deg; and 84&deg; (uses
+backward T and CI scale)
+        </a></li>
+      <li><a href="sr-calcs-by-example.html#mozTocId520478">Tan(x) for
+angles between between 45&deg; and 84&deg; (uses forward T and C scale)
+        </a></li>
+      <li><a href="sr-calcs-by-example.html#mozTocId337320">Sin(x) and tan(x) for
+angles between 0.6&deg; and 5.7&deg;&nbsp;
+(using the ST and C scales)</a></li>
+      <li><a href="sr-calcs-by-example.html#mozTocId646264">Sin(x) and
+tan(x) for other small angles (using C and D scales)</a></li>
+    </ul>
+  </li>
+  <li><a href="sr-calcs-by-example.html#mozTocId588081">Squares and Square
+Roots</a>
+    <ul>
+      <li><a href="sr-calcs-by-example.html#mozTocId517550">Square (uses C and B
+scales)</a></li>
+      <li><a href="sr-calcs-by-example.html#mozTocId178634">Square Root (uses C
+and B scales)</a></li>
+    </ul>
+  </li>
+  <li><a href="sr-calcs-by-example.html#mozTocId648550">Cubes and Cube Roots</a>
+    <ul>
+      <li><a href="sr-calcs-by-example.html#mozTocId924903">Cube&nbsp; (uses D
+and K scales)</a></li>
+      <li><a href="sr-calcs-by-example.html#mozTocId734623">Cube Root (uses D and
+K scales)</a></li>
+    </ul>
+  </li>
+  <li><a href="sr-calcs-by-example.html#mozTocId709189">Log-Log Scales</a>
+    <ul>
+      <li><a href="sr-calcs-by-example.html#mozTocId916253">Raising a Number to
+Powers of 10 (N&gt;1)</a></li>
+      <li><a href="sr-calcs-by-example.html#mozTocId702509">Raising a Number to
+Powers of 10 (N&lt;1)</a></li>
+      <li><a href="sr-calcs-by-example.html#mozTocId176241">Finding the 10th Root</a></li>
+      <li><a href="sr-calcs-by-example.html#mozTocId676447">Arbitrary Powers
+(Staying on Same LL Scale)</a></li>
+      <li><a href="sr-calcs-by-example.html#mozTocId398379">Arbitrary Powers
+(Switching LL Scales)</a></li>
+      <li><a href="sr-calcs-by-example.html#mozTocId364108">Log-Log Approximations</a></li>
+    </ul>
+  </li>
+</ul>
+<br>
+<hr size="2" width="100%"><br>
+<h1><a class="mozTocH1" name="mozTocId271389"></a>Multiplication</h1>
+<h2><a class="mozTocH2" name="mozTocId330634"></a>Simple Multiplication
+(uses C and D scales)</h2>
+Example: calculate 2.3 &times; 3.4
+<ul>
+  <li> Move the cursor to 2.3 in the D scale. </li>
+  <li> Slide the leftmost '1' on C to the cursor. </li>
+  <li> Move the cursor to 3.4 on the C scale. </li>
+  <li> The cursor is on the D scale at 7.8. This is the answer.<br>
+  </li>
+</ul>
+<h2><a class="mozTocH2" name="mozTocId162810"></a>
+'Wrap-Around' Multiplication (uses C and D scales)</h2>
+<p>Example: calculate 2.3 &times; 4.5<br>
+</p>
+<ul>
+  <li> Move the cursor to 2.3 on the D scale. </li>
+  <li> Slide the rightmost '1' on C to the cursor. </li>
+  <li> Move the cursor to 4.5 on the C scale. </li>
+  <li> The cursor is now at 1.04 on the D scale.<br>
+  </li>
+  <li> We know the correct answer is near 2 &times; 5 = 10, so we
+adjust the
+decimal place to get 10.4. </li>
+</ul>
+<h2><a class="mozTocH2" name="mozTocId189215"></a>Folded-Scale
+Multiplication (uses C, D, CF and DF scales)</h2>
+Example: calculate 2.3 &times; 4.5<br>
+<ul>
+  <li> Move the cursor to 2.3 on the D scale. </li>
+  <li> Slide the leftmost '1' on C to the cursor. </li>
+  <li> We can't move the cursor to 4.5 on the C scale; it's out of
+range. We can use the folded scales to get this answer. </li>
+  <li> Move the cursor to 4.5 on the CF scale. </li>
+  <li> The cursor is now at 1.4 on the DF scale. </li>
+  <li> We know the correct answer is near 2 &times; 5 = 10, so we
+adjust the
+decimal place to get 10.4. </li>
+</ul>
+<h2><a class="mozTocH2" name="mozTocId131747"></a>
+Multiplication by &#960; (uses D and DF scales)</h2>
+<p>Example: calculate 123 &times; &#960;<br>
+</p>
+<ul>
+  <li> Move the cursor to 1.23 on the D scale. </li>
+  <li> The cursor is now at 3.86 on the DF scale. </li>
+  <li> We know that the correct answer is near 100 &times; 3 = 300, so
+we
+adjust the decimal place to get 386.</li>
+</ul>
+<h1><a class="mozTocH1" name="mozTocId615703"></a>Division</h1>
+<h2><a class="mozTocH2" name="mozTocId288919"></a>Simple Division (uses
+C and D scales)</h2>
+Example: calculate 4.5 / 7.8<br>
+<ul>
+  <li>Move the cursor to 4.5 on the D scale.</li>
+  <li>Slide 7.8 on the C scale to the cursor.</li>
+  <li>Move the cursor to either the leftmost or rightmost '1' on the C
+scale, whichever is in range. In this case, you would move it to the
+rightmost '1'.</li>
+  <li>The cursor is now at 5.8 on the D scale.</li>
+  <li>We know that the correct answer is near 4/8 = 0.5, so we adjust
+the decimal place to get 0.58.</li>
+</ul>
+<h2><a class="mozTocH2" name="mozTocId608173"></a>Reciprocal (uses C
+and CI scales)</h2>
+Example: calculate the reciprocal of 7.8, or 1/7.8<br>
+<ul>
+  <li>Move the cursor to 7.8 on the CI scale. Note that the CI scale
+increases from right to left, as indicated by the '&lt;' symbols before
+the numbers.</li>
+  <li>The cursor is now at 1.28 on the C scale.</li>
+  <li>We know that the correct answer is near 1/10 = 0.1, so we adjust
+the decimal place to get 0.128.<br>
+  </li>
+</ul>
+<h1><a class="mozTocH1" name="mozTocId574462"></a>Trigonometry</h1>
+<h2><a class="mozTocH2" name="mozTocId93620"></a>Sin(x) for angles
+between 5.7&deg; and 90&deg; (uses S and C scales)</h2>
+Example: calculate sin(33&deg;)<br>
+<ul>
+  <li> Move the cursor to 33 on the S scale. </li>
+  <li> The cursor is at 5.45 on the C scale. </li>
+  <li> We know that the correct answer for a sin in this range is
+between 0.1 and 1, so we adjust the decimal place to get 0.545. </li>
+</ul>
+<h2><a class="mozTocH2" name="mozTocId270328"></a>
+Cos(x) for angles between 5.7&deg; and 90&deg; (uses S and C scales)</h2>
+Example: calculate cos(33&deg;). <br>
+<ul>
+  <li> The cos scale shares the sin S scale. Instead of increasing
+from left to right like the sin scale, cos increases from right to
+left. This is indicated on the slide rule by '&lt;' characters which
+remind you that the number in increasing 'backwards'. </li>
+  <li> Move the cursor to &lt;33 on the S scale. </li>
+  <li> The cursor is now at 8.4 on the C scale. </li>
+  <li> We know that the correct answer for a cos in this range is
+between 0.1 and 1, so we adjust the decimal place to get 0.84.</li>
+</ul>
+<h2><a class="mozTocH2" name="mozTocId723035"></a>Tan(x) for angles
+between between 5.7&deg; and 45&deg; (uses T and
+C
+scales)</h2>
+Example: calculate tan(33&deg;).<br>
+<ul>
+  <li>Move the cursor to 33 on the T scale.</li>
+  <li>The cursor is now at 6.5 on the C scale.</li>
+  <li>We know that the correct answer for a tan in this range is
+between 0.1 and 1, so we adjust the decimal place to get 0.65.</li>
+</ul>
+<h2><a class="mozTocH2" name="mozTocId102755"></a>Tan(x) for angles
+between between 45&deg; and 84&deg; (uses
+backward T and CI scale)
+</h2>
+Example: calculate tan(63&deg;).
+<ul>
+  <li>Move the cursor to &lt;63 on the T scale. Note that this range
+increases from right to left, as indicated by the '&lt;' before the
+numbers.<br>
+  </li>
+  <li>The cursor is now at &lt;1.96 on the CI scale.</li>
+  <li>We know that the correct answer for a tan in this range is
+between 1 and 10, so we don't need to adjust the decimal place.</li>
+</ul>
+<h2><a class="mozTocH2" name="mozTocId520478"></a>Tan(x) for
+angles between between 45&deg; and 84&deg; (uses forward T and C scale)
+</h2>
+Example: calculate tan(63&deg;).
+<ul>
+  <li>Move the cursor to 63 on the forward T scale. This scale
+increases from left to right.<br>
+  </li>
+  <li>The cursor is now at 1.96 on the C scale.</li>
+  <li>We know that the correct answer for a tan in this range is
+between 1 and 10, so we don't need to adjust the decimal place.</li>
+</ul>
+<h2><a class="mozTocH2" name="mozTocId337320"></a>Sin(x) and tan(x) for
+angles between 0.6&deg; and 5.7&deg;&nbsp;
+(using the ST and C scales)</h2>
+In this range, the sin and tan functions are very close in value, so a
+single scale can be used to calculate both.<br>
+<br>
+Example: calculate sin(1.5&deg;)<br>
+<ul>
+  <li>Move the cursor to 1.5 on the ST scale. <br>
+  </li>
+  <li>The cursor is now at 2.62 on the C scale.</li>
+  <li>We know that the correct answer for a sin in this range is
+between 0.01 and 0.1, so we adjust the decimal place to get 0.0262.</li>
+</ul>
+<h2><a class="mozTocH2" name="mozTocId646264"></a>Sin(x) and
+tan(x) for other small angles (using C and D scales)</h2>
+For small angles, the sin or tan function can be approximated closely
+by the equation: <br>
+sin(x) = tan(x) = x / (180/&#960;)&nbsp; =&nbsp; x / 57.3.<br>
+Knowing this, the calculation becomes a simple division. This technique
+can also be used on rules without an ST scale.<br>
+<br>
+Example: calculate sin(0.3&deg;)<br>
+<ul>
+  <li>Move the cursor to 3 on the D scale.<br>
+  </li>
+  <li>Slide 5.73 on the C scale to the cursor. Most rules have a tick
+labeled 'R' at this point.<br>
+  </li>
+  <li>Move the cursor to either the leftmost or rightmost '1' on the C
+scale, whichever is in range.<br>
+  </li>
+  <li>The cursor is now at 5.24 on the D scale. <br>
+  </li>
+  <li>We know that the correct answer is near 0.3 / 60 = 0.005, so we
+adjust the decimal place to get 0.00524.</li>
+</ul>
+<h1><a class="mozTocH1" name="mozTocId588081"></a>Squares and Square
+Roots</h1>
+<h2><a class="mozTocH2" name="mozTocId517550"></a>Square (uses C and B
+scales)</h2>
+Example: calculate 4.7<sup> 2 </sup><br>
+<ul>
+  <li>Move the cursor to 4.7 on the C scale.</li>
+  <li>The cursor is now at 2.2 on the B scale.</li>
+  <li>We know that the correct answer is near 5<sup>2</sup> = 25, so we
+adjust the decimal place to get 22.</li>
+</ul>
+<h2><a class="mozTocH2" name="mozTocId178634"></a>Square Root (uses C
+and B scales)</h2>
+Example: calculate &#8730;4500<br>
+<ul>
+  <li>You will notice that the B scale has two similar halves. The
+first step is to decide which half to use to find a square root.</li>
+  <li>The left half is used to find the square root of numbers with odd
+numbers of digits or leading zeros after the decimal point. The right
+half is used for numbers with even numbers of digits or leading zeros.
+Since 4500 has an even number of digits, then we'll use the right half
+of the scale.</li>
+  <li>Move the cursor to 4.5 on the right half of the B scale. <br>
+  </li>
+  <li>The cursor is now at 6.7 on the C scale.</li>
+  <li>We know that 70<sup>2</sup> = 3600, which is in the ballpark of
+4500. Therefore we adjust the decimal point to get a result of 67.<br>
+  </li>
+</ul>
+<h1><a class="mozTocH1" name="mozTocId648550"></a>Cubes and Cube Roots</h1>
+<h2><a class="mozTocH2" name="mozTocId924903"></a>Cube&nbsp; (uses D
+and K scales)</h2>
+Example: calculate 4.7<sup>3</sup> <br>
+<ul>
+  <li>Move the cursor to 4.7 on the D scale.</li>
+  <li>The cursor is now at 1.04 on the K scale.</li>
+  <li>We know that the correct answer is near 5 x 5 x 5, which, to
+further approximate, is near 5 x 5 x 4 = 5 x 20 = 100. Therefore we
+adjust the decimal point to get a result of 104.<br>
+  </li>
+</ul>
+<h2><a class="mozTocH2" name="mozTocId734623"></a>Cube Root (uses D and
+K scales)</h2>
+Example: calculate <sup>3</sup>&#8730;4500 <br>
+<ul>
+  <li>You will notice that the K scale has three similar thirds. The
+first step is to determine which third to use to find the cube root.</li>
+  <li>The first third is used to find the cube root is numbers with one
+digit. You can cycle through the thirds, increasing the number of
+digits by one
+for each third, to find which part to use.</li>
+  <li>For the value of 4500, which has 4 digits, we cycle through the
+thirds and find that we would use the first third.</li>
+  <li>Move the cursor to 4.5 on the third third of the K scale. <br>
+  </li>
+  <li>The cursor is now at 1.65 on the D scale.</li>
+  <li>We can take a guess that the correct answer is around 10. The
+cube of 10 is 1000 and the cube of 20 is 8000. Thus we know that the
+correct answer is between 10 and 20, therefore we can move the decimal
+place and get the correct result of 16.5.<br>
+    <br>
+  </li>
+</ul>
+<h1><a class="mozTocH1" name="mozTocId709189"></a>Log-Log Scales</h1>
+Log-log scales are used to raise numbers to powers. Unlike many of the
+other scales, log-log scales can't be learned simply be memorizing a
+few
+rules. It is necessary to actually understand how they work. These
+examples are intended to gradually introduce you to the concepts of
+log-log scales, so you gain that understanding. Hopefully, the power of
+10 examples don't bore you, as they lay the foundation for later
+examples. <br>
+<br>
+Since there are many slight variations of log-log scales on different
+slide rules, I'll refer only to the scales found on the Pickett N3,
+Pickett N600 and Pickett N803 slide rules (among others). If you want
+to view a virtual N3, click <a target="_blank"
+ href="n3t/virtual-n3-t.html">here</a>,
+if you want a virtual N600, click <a target="_blank"
+ href="n600es/virtual-n600-es.html">here</a>
+(opens in a new window.)<br>
+<br>
+Another interesting aspect of&nbsp; LL scales is that the decimal point
+is "placed." That is, you don't have to figure out afterwards where the
+decimal point belongs in your result. The disadvantage to this is that
+LL scales are limited in the numbers they can calculate. Typically, the
+highest result you can get is about 20,000, and the lowest is 1/20,000
+or 0.00005. One exception to this is the Picket N4 (virtual <a
+ target="_blank"
+ href="n4es/virtual-n4es.html">here</a>),
+which goes up to 10<sup>10</sup>.
+<br>
+<br>
+<h2><a class="mozTocH2" name="mozTocId916253"></a>Raising a Number to
+Powers of 10 (N&gt;1)</h2>
+To raise a number to the power of 10, simply move the cursor to the
+number and look at the next highest LL scale. (These examples are for
+numbers greater than 1. )<br>
+<br>
+Example: calculate 1.35 <sup>10</sup> &nbsp;&nbsp; &nbsp; (uses LL2
+and
+LL3 scales)<br>
+<ul>
+  <li>Move the cursor to 1.35 on the LL2 scale. <br>
+  </li>
+  <li>The cursor is at 20.1 on the LL3 scale. This is the correct
+answer. <br>
+  </li>
+</ul>
+Example: calculate 1.04 <sup>100</sup> &nbsp;&nbsp;&nbsp; (uses LL1
+and
+LL3 scales)<br>
+<ul>
+  <li>Move the cursor to 1.04 on the LL1 scale. <br>
+  </li>
+  <li>The cursor is at 50.5 on the LL3 scale.</li>
+</ul>
+Example: calculate 1.002 <sup>1000</sup>&nbsp; (uses LL0 and LL3
+scales)<br>
+<ul>
+  <li>Move the cursor to 1.002 on the LL0 scale.</li>
+  <li>The cursor is at 7.4 on the LL3 scale. This is the correct answer.</li>
+</ul>
+Example: calculate sequential powers of ten of 1.002 (uses LL0 to LL3
+scales)<br>
+<ul>
+  <li>Move the cursor to 1.002 on the LL0 scale.</li>
+  <li>On LL1, the cursor is at 1.002 <sup>10</sup> , or 1.02.</li>
+  <li>On LL2, the cursor is at 1.002 <sup>100</sup> , or 1.22.</li>
+  <li>On LL3, the cursor is at 1.002 <sup>1000</sup> , or 7.4.</li>
+</ul>
+<h2><a class="mozTocH2" name="mozTocId702509"></a>Raising a Number to
+Powers of 10 (N&lt;1)</h2>
+The reciprocals of the LL scales are the -LL scales. They work the same
+way, but you have to make sure that you look for the answer on a -LL
+scale. <br>
+<br>
+Example: calculate 0.75 <sup>10</sup>&nbsp;&nbsp;&nbsp;&nbsp; (uses
+-LL2
+and -LL3 scales)<br>
+<ul>
+  <li>Move the cursor to 0.75 on the -LL2 scale.</li>
+  <li>The cursor is at 0.056 on the -LL3 scale. This is the correct
+answer.</li>
+</ul>
+<h2><a class="mozTocH2" name="mozTocId176241"></a>Finding the 10th Root</h2>
+As you've seen in the previous examples, to raise a number to the 10th
+power, you simply look at the adjacent number on the next highest LL
+scale. To find a tenth root, you look at the adjacent number on the
+next lowest LL scale. Remember also that finding the tenth root is the
+same as raising a number to the power of 0.1. <br>
+<br>
+Example: calculate <sup>10</sup>&#8730;5, or 5 <sup>0.1</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+(uses LL2 and LL3 scales)<br>
+<ul>
+  <li>Move the cursor to 5 on the LL3 scale.</li>
+  <li>The cursor is now at 1.175 on the LL2 scale. This is the correct
+answer.</li>
+</ul>
+Example: calculate <sup>100</sup>&#8730;0.15, or 0.15 <sup>0.01</sup>&nbsp;&nbsp;
+(uses -LL3 and -LL1 scale)<br>
+<ul>
+  <li>Move the cursor to 0.15 on the -LL3 scale.</li>
+  <li>The cursor is now at 0.9812 on the -LL1 scale. This is the
+correct answer.</li>
+</ul>
+<h2><a class="mozTocH2" name="mozTocId676447"></a>Arbitrary Powers
+(Staying on Same LL Scale)</h2>
+Occasionally, depending on the numbers, it is possible to calculate a
+power without switching scales. <br>
+<br>
+Example: calculate 9.1 <sup>2.3</sup>&nbsp;&nbsp; &nbsp;&nbsp;
+&nbsp;&nbsp; (uses LL3 scale)<br>
+<ul>
+  <li>Move the cursor to 9.1 on the LL3 scale.</li>
+  <li>Slide the leftmost '1' on C to the cursor.</li>
+  <li>Move the cursor to 2.3 on the C scale.</li>
+  <li>The cursor is now at about 160 on the LL3. This is very close to
+the correct answer of 160.6. One of the problems with LL scales is that
+their accuracy diminishes as the numbers increase in value. <br>
+  </li>
+</ul>
+Example: calculate 230 <sup>0.45</sup>&nbsp;&nbsp; &nbsp;&nbsp; (uses
+LL3 scale)<br>
+<ul>
+  <li>Move the cursor to 230 on the LL3 scale. <br>
+  </li>
+  <li>Since we're raising to a power that's less than 1, we have to go
+left on the LL scale.</li>
+  <li>Slide the rightmost '1' on the C scale to the cursor. <br>
+  </li>
+  <li>Move the cursor to 4.5 on the C scale.</li>
+  <li>The cursor is now at 11.6 on the LL3 scale. This is close to the
+correct answer of 11.56.</li>
+</ul>
+Example: calculate 0.78 <sup>3.4</sup> &nbsp;&nbsp; &nbsp; (uses -LL2
+scale)<br>
+<ul>
+  <li>Move the cursor to 0.78 on the -LL2 scale. <br>
+  </li>
+  <li>Slide the leftmost '1' on the C scale to the cursor. <br>
+  </li>
+  <li>Move the cursor to 3.4 on the C scale.</li>
+  <li>The cursor is now at 0.43 on the -LL2 scale. This is the correct
+answer.</li>
+</ul>
+Example: calculate 0.78 <sup>0.45</sup> &nbsp;&nbsp; &nbsp; (uses -LL2
+scale)<br>
+<ul>
+  <li>Move the cursor to 0.78 on the -LL2 scale. <br>
+  </li>
+  <li>Since we're raising to a power that's less than 1, we have to go
+left on the LL scale.</li>
+  <li>Slide the rightmost '1' on the C scale to the cursor. <br>
+  </li>
+  <li>Move the cursor to 4.5 on the C scale.</li>
+  <li>The cursor is now at 0.894 on the -LL2 scale. This is the correct
+answer.<br>
+  </li>
+</ul>
+<h2><a class="mozTocH2" name="mozTocId398379"></a>Arbitrary Powers
+(Switching LL Scales)</h2>
+One of the rules of exponents is that (A <sup>B</sup> ) <sup>C</sup>
+is equal to A <sup>B x C</sup>. We can use this fact, along with our
+knowledge of powers of ten, to calculate arbitrary powers.<br>
+<br>
+Example: calculate 1.9 <sup>2.5 </sup>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+(uses LL2 and LL3 scales)<br>
+<ul>
+  <li>If we try to calculate this the easy way, the power 2.5 is out of
+range for the scale.</li>
+  <li>We can reinterpret the problem as:<br>
+Calculate (1.9 <sup>0.25</sup> ) <sup>10</sup><br>
+Because 0.25 x 10 is 2.5.</li>
+  <li>Move the cursor to 1.9 on the LL2 scale.</li>
+  <li>Slide the rightmost '1' on the C scale to the cursor.</li>
+  <li>Move the cursor to 2.5 on the C scale.</li>
+  <li>The cursor is now at 1.9 <sup>0.25</sup> on the LL2 scale. Since
+we want to also raise this to the power of 10, we look "one scale
+higher" at the LL3 scale.</li>
+  <li>The cursor is at 4.97 on the LL3 scale. This is the correct
+answer.<br>
+  </li>
+</ul>
+Example: calculate 12 <sup>0.34</sup>&nbsp;&nbsp; &nbsp;&nbsp; (uses
+LL3 and LL2 scales)<br>
+<ul>
+  <li>Like the previous example, if we try to calculate this the easy
+way, the power 0.34 is out of range for the scale.</li>
+  <li>We can reinterpret the problem as:<br>
+Calculate (12 <sup>3.4</sup> ) <sup>0.1</sup><br>
+Because 3.4 x 0.1 is 0.34.</li>
+  <li>Move the cursor to 12 on the LL3 scale.</li>
+  <li>Slide the leftmost '1' on the C scale to the cursor.</li>
+  <li>Move the cursor to 3.4 on the C scale.</li>
+  <li>The cursor is now at 12 <sup>3.4</sup> on the LL3 scale, which
+is about 5000 (which is not the number we're looking for). Since we
+also want to raise this to the power of 0.1, we look at the LL2 scale.</li>
+  <li>The cursor is now at 2.33 on the LL2 scale. This is the correct
+answer. <br>
+  </li>
+</ul>
+Example: calculate 0.99 <sup>560</sup> &nbsp;&nbsp; (uses -LL1 and
+-LL3 scales)<br>
+<ul>
+  <li>We can reinterpret this problem as:<br>
+Calculate (0.99 <sup>5.6</sup> ) <sup>100</sup><br>
+Because 5.6 x 100 = 560</li>
+  <li>Move the cursor to 0.99 on the -LL1 scale.</li>
+  <li>Slide the leftmost '1' on the C scale to the cursor.</li>
+  <li>Move the cursor to 5.6 on the C scale.</li>
+  <li>The cursor is now at 0.99 <sup>5.6</sup> on the -LL1 scale.
+Since we also want to raise this to the power of 100, we look "two
+scales higher", or the -LL3 scale.</li>
+  <li>The cursor is now at 0.0036 on the -LL3 scale. This is the
+correct answer.</li>
+</ul>
+<h2><a class="mozTocH2" name="mozTocId364108"></a>Log-Log Approximations</h2>
+In general, LL scales don't handle numbers extremely close to 1, such
+as 1.001 or 0.999. This is not a problem because there is an accurate
+approximation for numbers in this range. In general, if you have a very
+small number 'd', then:<br>
+<br>
+&nbsp;&nbsp;&nbsp; (1 + d) <sup>p</sup> = 1 + d p<br>
+<br>
+Example: calculate 1.00012 <sup>34</sup> &nbsp; (uses C and D scales)<br>
+<ul>
+  <li>In this case, if we use the approximation (1 + d) <sup>p</sup> =
+1 + d p, then:<br>
+d = 0.00012, and <br>
+p = 34</li>
+  <li>We must calculate 0.00012 * 34.</li>
+  <li>Move the cursor to 1.2 on the D scale.</li>
+  <li>Slide the leftmost '1' on the C scale to the cursor. <br>
+  </li>
+  <li>Move the cursor to 3.4 on the C scale.</li>
+  <li>The cursor is now at 4.08 on the D scale. <br>
+  </li>
+  <li>We know that the correct answer would be near 0.0001 * 30, or
+0.003. Therefore we adjust the decimal point to get a value of 0.00408.</li>
+  <li>Add 1 to 0.00408. The result is 1.00408, which is very close to
+the correct answer of 1.004088.</li>
+</ul>
+Example: calculate 0.99943 <sup>21</sup> &nbsp;&nbsp; (uses C and D
+scales)<br>
+<ul>
+  <li>Like before, we'll use the approximation (1 + d) <sup>p</sup> =
+1 + d p. In this case:<br>
+d = (0.99943 - 1) = -0.00057, and <br>
+p = 21</li>
+  <li>We must calculate -0.00057 * 21.</li>
+  <li>Move the cursor to 5.7 on the D scale.</li>
+  <li>Slide the rightmost '1' on the C scale to the cursor.</li>
+  <li>Move the cursor to 2.1 on the C scale.</li>
+  <li>The cursor is at 1.195 on the D scale.</li>
+  <li>We know that the correct answer would be near -0.0006 * 20, or
+-0.0120. Therefore we adjust the decimal point to get a value of
+-0.01195. <br>
+  </li>
+  <li>Subtract 0.01195 from 1. The result is (1 - 0.01195) = 0.98803.
+This is very close to the correct answer of 0.98809.<br>
+  </li>
+</ul>
+<br>
+<hr size="2" width="100%">
+<p><small>Copyright (c) 2005 Derek Ross</small></p>
+<p><small><a href="index.html">[Gallery Index]</a></small></p>
+</body>
+</html>
