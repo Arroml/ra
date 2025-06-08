@@ -26,8 +26,9 @@ main:
 
 	@ Methode 3:
 
-	EOR r7, r7, r8 		@ Xor R7 - 1 ist 1111 1111 1111 1111 
-	ADD r7, r7, #1
+	ADD R4, R5, R5 
+	SUB R6, R5, R4 	@-x = x-2x=-x
+	
 
 	@ Methode 4:
 	mov r4, #0
